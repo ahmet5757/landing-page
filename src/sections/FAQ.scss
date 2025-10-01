@@ -1,0 +1,16 @@
+.faq {
+  padding: 4rem 1rem;
+  background: var(--color-bg);
+  color: var(--color-text);
+
+  &__title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,29 @@
+.features {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: var(--color-bg);
+  color: var(--color-text);
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 641px) {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1025px) {
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

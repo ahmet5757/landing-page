@@ -1,0 +1,17 @@
+// Light Theme
+:root {
+  --color-bg: #ffffff;
+  --color-text: #222222;
+  --color-primary: #4f46e5; // mor
+  --color-secondary: #64748b; // gri
+  --color-border: #e2e8f0;
+  --font-main: "Inter", sans-serif;
+}
+
+[data-theme="dark"] {
+  --color-bg: #1e1e1e;
+  --color-text: #f5f5f5;
+  --color-primary: #6366f1;
+  --color-secondary: #94a3b8;
+  --color-border: #374151;
+}
