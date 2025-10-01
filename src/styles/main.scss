@@ -1,7 +1,7 @@
-@import "variables";
-@import "mixins";
+@import "_variables";
+@import "_mixins";
 
-// Reset + Base Styles
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +15,8 @@ body {
   line-height: 1.6;
 }
 
-// Basit container class
+
 .container {
   @include container;
 }
+

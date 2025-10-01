@@ -1,7 +1,10 @@
+@import '../../src/styles/variables';
+
 .faq {
   padding: 4rem 1rem;
   background: var(--color-bg);
   color: var(--color-text);
+  transition: background 0.3s ease, color 0.3s ease;
 
   &__title {
     text-align: center;
@@ -12,5 +15,41 @@
   &__list {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  .accordion {
+    background: var(--color-bg);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+
+    
+
+    &__header {
+      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      color: var(--color-text);
+      transition: background 0.3s ease, color 0.3s ease;
+
+      &:hover {
+        background: var(--color-hover);
+      }
+    }
+
+    &__body {
+      max-height: 0; 
+      overflow: hidden;
+      padding: 0 1rem; 
+      border-top: 1px solid var(--color-border);
+      color: var(--color-text);
+      background: var(--color-bg);
+      transition: max-height 0.5s ease, padding 0.3s ease;
+    }
   }
 }

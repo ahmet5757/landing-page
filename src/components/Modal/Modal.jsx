@@ -7,7 +7,7 @@ function Modal({ isOpen, onClose, children }) {
     <div className="modal-overlay" onClick={onClose}>
       <div
         className="modal"
-        onClick={(e) => e.stopPropagation()} // İçeriğe tıklayınca kapanmasın
+        onClick={(e) => e.stopPropagation()} 
         role="dialog"
         aria-modal="true"
       >

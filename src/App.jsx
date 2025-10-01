@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-// Sections
 import Hero from "./sections/Hero";
 import Features from "./sections/Features";
 import Pricing from "./sections/Pricing";
 import FAQ from "./sections/FAQ";
 import Contact from "./sections/Contact";
 import "./styles/main.scss";
-
-
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import BackToTop from "./components/BackToTop/BackToTop";
 
 function App() {
   const [theme, setTheme] = useState("light");
 
-  // Tema toggle
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
@@ -24,29 +23,20 @@ function App() {
 
   return (
     <>
-      {/* Header */}
-      <header className="site-header">
-        <nav className="container">
-          <h1 className="logo">MyProduct</h1>
-          <button onClick={toggleTheme} className="theme-toggle">
-            {theme === "light" ? "🌙 Dark" : "☀️ Light"}
-          </button>
-        </nav>
+      <header>
+        <Header theme={theme} toggleTheme={toggleTheme} />
       </header>
-
       <main>
         <Hero />
         <Features />
         <Pricing />
         <FAQ />
         <Contact />
+        <BackToTop />
       </main>
 
-      {/* Footer */}
-      <footer className="site-footer">
-        <div className="container">
-          <p>© {new Date().getFullYear()} MyProduct. All rights reserved.</p>
-        </div>
+      <footer>
+        <Footer />
       </footer>
     </>
   );
